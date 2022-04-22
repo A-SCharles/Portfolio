@@ -85,24 +85,19 @@ body {
     border: inherit;
     box-shadow: 9px 10px 50px 1px cyan;
     border-radius: 5px;
-    animation: glow .5s ease-in-out infinite alternate;
+    animation: glow 1.5s ease-in-out infinite alternate;
 }
-
-.glow {
-    font-size: 80px;
-    color: #fff;
-    text-align: center;
-    border: inherit;
-    animation: glow .5s ease-in-out infinite alternate;
-  }
   
   @keyframes glow {
     from {
-      box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+      box-shadow: 0 0 10px #fff, 0 0 20px #fff,
+       0 0 30px #fa8072, 0 0 40px #fa8072,
+        0 0 50px #fa8072, 0 0 60px #fa8072,
+         0 0 70px #fa8072;
     }
     
     to {
-      box-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+      box-shadow: 0 0 20px #fff, 0 0 30px #0077b5, 0 0 40px #0077b5, 0 0 50px #0077b5, 0 0 60px #0077b5, 0 0 70px #0077b5, 0 0 80px #0077b5;
     }
   }
 
