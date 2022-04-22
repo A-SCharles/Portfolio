@@ -48,9 +48,10 @@ body {
     }
 
 #navbar a:hover {
-    background-color: white;
+    background-color: rgb(98, 101, 255);
     transition: .8s;
-    z-index: 999;
+    /* z-index: 999; */
+    color: white;
 }
 
 #welcome-section {
@@ -59,7 +60,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-}
+    }
 
 #welcome-section h1 {
     font-family: times-new-roman;
@@ -92,6 +93,7 @@ body {
     justify-content: center;
     text-align: justify;
     line-height: 1.25;
+    scroll-margin-block-start:35px ;
 }
 
 #about h2 {
@@ -110,6 +112,73 @@ body {
     border: 2px solid cyan;
     border-radius: 5px;
 }
+    /* SKILLS AND TESTIMONIALS */
+
+    #skillsTestContainer{
+        display: flex;
+        flex-wrap: wrap;
+        width: 97%;
+        text-align: center;
+        margin: auto;
+        margin-bottom: 1em;
+        padding: 20px;
+        border-radius: 5px;
+        border: 2px solid cyan;
+    }
+
+    .skillsTest{
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        width: 45%;
+        height: fit-content;
+        margin: 10px auto;
+        padding: 2%;
+        border: 2px solid #fa8072;
+        border-radius: 10px;
+    }
+
+    .skillsTest h3 {
+        text-align: center;
+        width: 100%;
+        margin: auto;
+        padding: 0 20px 20px;
+    }
+        
+    .skills, .tests {
+        border-radius: 20%;
+        display: inherit;
+        flex-wrap: inherit;
+        text-align: center;
+        width: 47%;
+        height: 300px;
+        margin: 10px auto;
+        padding: 2px;
+        border: 2px solid cyan;
+        justify-content: center;
+        align-content: center;
+    }
+
+    progress{
+        accent-color: cyan;
+    }
+
+    .tests {
+        position: relative;
+    }
+
+    #name {
+        text-decoration: underline;
+        font-style: italic;
+        font-size: 20px;
+    }
+
+    .tests p {
+        position: relative;
+        font-size: 16px;
+    }
+
+    /* PROJECTS */  
 
 #projects {
     display: flex;
@@ -128,16 +197,6 @@ body {
     text-align: center;
 }
 
-.project-tile a {
-    width: 100%;
-    color: white;
-    text-decoration: none;
-}
-
-.project-tile a:hover {
-    color: cyan;
-}
-
 .project-tile {
     text-align: center;
     width: 45%;
@@ -150,14 +209,24 @@ body {
 .project-tile img {
     width: 50%;
     max-height: 400px;
+    transition: .90s;
+}
+
+.project-tile a {
+    width: 100%;
+    color: white;
+    text-decoration: none;
+}
+
+.project-tile a:hover {
+    color: cyan;
 }
 
 .project-tile img:hover {
     width: 70%;
-    max-height: 500px;
-    transition: transform .2s;
+    max-height: 460px;
+    /* transition: .90s; */
 }
-
 /**/
 
 /* CONTACT SECTION  */
@@ -227,6 +296,25 @@ label {
     vertical-align: middle;
 }
 
+#btn {
+    font-size: 20px;
+    border-radius: 5px;
+    width: 200px;
+    height: 40px;
+    background-color: #1c1c1c;
+    color: cyan  ;
+    transition: .9s;
+}
+
+#btn:hover {
+    width: 210px;
+    height: 50px;
+    /* background-color: cyan; */
+    /* color: #1c1c1c; */
+    transition: .9s;
+    box-shadow: 5px 5px 20px cyan ;
+}
+
 
 /* CONTACT LINKS */
 
@@ -246,6 +334,7 @@ label {
 .fa {
     color: white;
     padding: 10px;
+    transition: .5s;
 }
 
 .fa-codepen:hover {
