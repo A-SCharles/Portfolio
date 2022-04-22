@@ -82,7 +82,8 @@ body {
     align-items: center;
     margin-top: 5em;
     margin-bottom: 5em;
-    border: 2px solid cyan;
+    border: inherit;
+    box-shadow: 9px 10px 50px 1px cyan;
     border-radius: 5px;
 }
 
@@ -157,7 +158,8 @@ body {
         border: 2px solid cyan;
         justify-content: center;
         align-content: center;
-        z-index: -999;
+        z-index: -1;
+        transition: .90s;
     }
 
     progress{
@@ -167,7 +169,7 @@ body {
     .tests {
         position: relative;
     }
-
+    
     #name {
         text-decoration: underline;
         font-style: italic;
@@ -191,6 +193,7 @@ body {
     padding: 20px;
     border-radius: 5px;
     border: 2px solid cyan;
+    scroll-margin-block-start: 65px;
 }
 
 #projects h1 {
@@ -226,6 +229,7 @@ body {
 .project-tile img:hover {
     width: 70%;
     max-height: 460px;
+    box-shadow: 5px 5px 10px 1px #0077b5;
     /* transition: .90s; */
 }
 /**/
