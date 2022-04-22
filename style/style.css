@@ -157,6 +157,7 @@ body {
         border: 2px solid cyan;
         justify-content: center;
         align-content: center;
+        z-index: -999;
     }
 
     progress{
@@ -338,7 +339,7 @@ label {
 }
 
 .fa-codepen:hover {
-    color: black;
+    color: cyan;
 }
 
 .fa-free-code-camp:hover {
@@ -346,7 +347,7 @@ label {
 }
 
 .fa-github-square:hover {
-    color: purple;
+    color: violet;
 }
 
 .fa-reddit-square:hover {
