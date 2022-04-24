@@ -180,8 +180,9 @@ body {
         0 0 40px #1c1c1c, 0 0 50px #1c1c1c,
         0 0 60px #1c1c1c, 0 0 70px #1c1c1c;
     }
-
   }
+
+  /* ABOUT SECTION  */
 
 #about-section {
     height: 100vh;
@@ -344,8 +345,7 @@ body {
     text-align: center;
     line-height: normal;
     scroll-behavior: smooth;
-    scroll-margin-block-start: 75px;
-    scroll-margin-block-end: 100px;
+    scroll-margin-block-start: 60px;
 }
 
 #cont {
