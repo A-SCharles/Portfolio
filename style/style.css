@@ -258,6 +258,16 @@ body {
         align-content: center;
         z-index: -1;
         transition: .90s;
+   }
+
+    .skills img{
+        flex-shrink: 100%;
+        height: 50%;
+        width: 55%;
+        max-width: auto;
+        max-height: auto;
+        margin-left: 25px;
+        margin-right: 25px;
     }
 
     progress{
