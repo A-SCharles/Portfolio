@@ -1,5 +1,7 @@
-/* 9. media query 
-  10. The height of the welcome section should be equal to the height of the viewport. */
+*{
+    scroll-behavior:  smooth;
+}
+
 body {
     font-family: Arial;
     font-size: 1.5em;
@@ -30,28 +32,84 @@ body {
 
 }
 
-#navbar {
+/**/
+#menu {
+	top: 0;
+    left: 0;
     position: fixed;
-    top: 0;
-    padding: 15px;
     width: 100vw;
+    background-color: #FA8072;
+	color: #FFF;
+	height: 45px;
+	/* padding: 15px; */
+	/* border-radius: 10px; */
+    
+}
+#menu ul, #menu li {
+	margin: 0 auto;
+	padding: 0;
+	list-style: none
+}
+#menu ul {
+	width: 100%;
     text-align: center;
-    background-color: #fa8072;
+}
+#menu li {
+    display: inline-block;
+    text-align: center;
+}
+#menu a {
+	display: block;
+	line-height: 45px;
+	padding: 0 15px;
+	text-decoration: none;
+	color: #000000;
+	font-size: 19px;
+    transition: .8s;
+}
+#menu a.dropdown-arrow:after {
+	content: "\25BE";
+	margin-left: 5px;
+}
+#menu li a:hover {
+	color: #FFFFFF;
+	background: #6265FF;
+    transition: .8s;
 }
 
-#navbar a {
-    padding: 15px 20px 15px 20px;
-    font-size: 19;
-    font-family: times-new-roman;
-    color: black;
+#menu ul.sub-menus{
+	height: auto;
+	overflow: hidden;
+	width: 170px;
+	background: #fa8072;
+	position: absolute;
+	z-index: 99;
+	display: none;
+}
+#menu ul.sub-menus li {
+	display: block;
+	width: 100%;
+    text-align: left;
+}
+#menu ul.sub-menus a {
+	color: black;
+	font-size: 16px;
     transition: .8s;
-    }
-
-#navbar a:hover {
-    background-color: rgb(98, 101, 255);
+}
+#menu li:hover ul.sub-menus {
+	display: block;
+}
+#menu ul.sub-menus a:hover{
+	background: #6265FF;
+	color: white;
     transition: .8s;
-    /* z-index: 999; */
-    color: white;
+}
+@media screen and (max-width: 800px){
+	#menu {position:relative}
+	#menu ul {background:#111;position:absolute;top:100%;right:0;left:0;z-index:3;height:auto;display:none}
+	#menu ul.sub-menus {width:100%;position:static;}
+	#menu ul.sub-menus a {padding-left:30px;}
+	#menu li {display:block;float:none;width:auto;}
 }
 
 #welcome-section {
@@ -83,22 +141,46 @@ body {
     margin-top: 5em;
     margin-bottom: 5em;
     border: inherit;
-    box-shadow: 9px 10px 50px 1px cyan;
+    /* box-shadow: 9px 10px 50px 1px cyan; */
     border-radius: 5px;
-    animation: glow 1.5s ease-in-out infinite alternate;
+    animation: glow 4s ease-in-out infinite;
 }
   
   @keyframes glow {
-    from {
-      box-shadow: 0 0 10px #fff, 0 0 20px #fff,
-       0 0 30px #fa8072, 0 0 40px #fa8072,
-        0 0 50px #fa8072, 0 0 60px #fa8072,
-         0 0 70px #fa8072;
+    0%{
+        box-shadow:0 0 80px #1c1c1c,
+        0 0 20px #1c1c1c, 0 0 30px #1c1c1c,
+        0 0 40px #1c1c1c, 0 0 50px #1c1c1c,
+        0 0 60px #1c1c1c, 0 0 70px #1c1c1c;
     }
-    
-    to {
-      box-shadow: 0 0 20px #fff, 0 0 30px #0077b5, 0 0 40px #0077b5, 0 0 50px #0077b5, 0 0 60px #0077b5, 0 0 70px #0077b5, 0 0 80px #0077b5;
+
+    25%{
+        box-shadow: 0 0 10px #fff, 0 0 20px #1c1c1c,
+        0 0 30px #fa8072, 0 0 40px #fa8072,
+         0 0 50px #fa8072, 0 0 60px #fa8072,
+          0 0 70px #fa8072;
     }
+
+    50%{
+        box-shadow:0 0 80px #1c1c1c,
+        0 0 20px #1c1c1c, 0 0 30px #1c1c1c,
+        0 0 40px #1c1c1c, 0 0 50px #1c1c1c,
+        0 0 60px #1c1c1c, 0 0 70px #1c1c1c;
+    }
+
+    75%{
+        box-shadow: 0 0 20px #fff, 0 0 30px #0077b5,
+       0 0 40px #0077b5, 0 0 50px #0077b5, 0 0 60px #0077b5,
+        0 0 70px #0077b5, 0 0 80px #0077b5;
+    }
+
+    100%{
+        box-shadow:0 0 80px #1c1c1c,
+        0 0 20px #1c1c1c, 0 0 30px #1c1c1c,
+        0 0 40px #1c1c1c, 0 0 50px #1c1c1c,
+        0 0 60px #1c1c1c, 0 0 70px #1c1c1c;
+    }
+
   }
 
 #about-section {
@@ -139,6 +221,7 @@ body {
         padding: 20px;
         border-radius: 5px;
         border: 2px solid cyan;
+        scroll-margin-block-start: 65px;
     }
 
     .skillsTest{
